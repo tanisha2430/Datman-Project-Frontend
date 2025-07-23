@@ -871,7 +871,7 @@ export default function Chat() {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-[#f4eaf7] text-slate-800 font-sans px-2">
-      <div className="flex flex-col w-full max-w-3xl h-[80vh] bg-white rounded-xl shadow-lg border border-slate-900 overflow-hidden">
+      <div className="flex flex-col w-full max-w-3xl h-[90vh] bg-white rounded-xl shadow-lg border border-slate-900 overflow-hidden">
         {/* Header */}
         <div className="flex items-center gap-3 p-4 font-semibold text-2xl bg-gradient-to-r from-sky-100 to-emerald-100 text-slate-700 shadow-sm z-10">
           <img src="/logo.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
