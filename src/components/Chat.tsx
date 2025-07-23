@@ -738,8 +738,6 @@
 
 
 
-
-
 import { useState, useRef, useEffect } from "react";
 import { marked } from "marked";
 import ChatbotAnimation from "./ChatbotAnimation";
@@ -872,18 +870,15 @@ export default function Chat() {
   if (showIntro) return <ChatbotAnimation />;
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#f4eaf7] px-2 py-4 font-sans text-slate-800">
-      {/* <div className="relative flex flex-col w-full max-w-3xl h-full max-h-[90vh] bg-white rounded-xl shadow-lg border border-slate-900 overflow-hidden"> */}
-      <div className="relative flex flex-col w-full max-w-3xl h-[90vh] bg-white rounded-xl shadow-lg border border-slate-900 overflow-hidden">
-
-        
-        {/* Fixed Header */}
-        <div className="flex items-center gap-3 p-4 font-semibold text-2xl bg-gradient-to-r from-sky-100 to-emerald-100 text-slate-700 shadow-sm z-10 sticky top-0">
+    <div className="w-full h-screen flex items-center justify-center bg-[#f4eaf7] text-slate-800 font-sans px-2">
+      <div className="flex flex-col w-full max-w-3xl h-full bg-white rounded-xl shadow-lg border border-slate-900 overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center gap-3 p-4 font-semibold text-2xl bg-gradient-to-r from-sky-100 to-emerald-100 text-slate-700 shadow-sm z-10">
           <img src="/logo.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
           <span>DatBot Support</span>
         </div>
 
-        {/* Scrollable Chat Body */}
+        {/* Chat Scroll Area */}
         <div className="flex-1 overflow-y-auto px-5 py-6 space-y-4 bg-white">
           {messages.map((msg, i) => {
             const isAssistant = msg.role === "assistant";
@@ -955,16 +950,14 @@ export default function Chat() {
               </div>
             );
           })}
-
           {loading && (
             <div className="italic text-gray-400 animate-pulse">Assistant is typing...</div>
           )}
-
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input Box */}
-        <div className="p-3 border-t bg-white sticky bottom-0 left-0 z-10 flex gap-2 flex-wrap sm:flex-nowrap">
+        {/* Input */}
+        <div className="p-3 border-t bg-white z-10 flex gap-2 flex-wrap sm:flex-nowrap">
           <input
             type="text"
             value={input}
