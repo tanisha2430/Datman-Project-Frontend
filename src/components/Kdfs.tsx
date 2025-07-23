@@ -38,7 +38,7 @@ const Kdfs: React.FC = () => {
   const [layer1Flags, setLayer1Flags] = useState<string[]>([]);
   const [layer2Status, setLayer2Status] = useState<string | null>(null);
   const [finalStatus, setFinalStatus] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  // const [error, setError] = useState<string | null>(null);
 
   const simulateScoring = () => {
     try {
@@ -82,9 +82,9 @@ const Kdfs: React.FC = () => {
         setStep(4);
       }, 9000);
 
-      setError(null);
+      // setError(null);
     } catch {
-      setError("Invalid JSON input.");
+      // setError("Invalid JSON input.");
     }
   };
 

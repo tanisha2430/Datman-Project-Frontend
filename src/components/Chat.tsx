@@ -115,7 +115,7 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3000/dev/chat", {
+      const res = await fetch("/.netlify/functions/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
@@ -160,6 +160,8 @@ export default function Chat() {
   if (showIntro) return <ChatbotAnimation />;
 
   return (
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+
     <div className="flex flex-col w-[50%] h-screen bg-gray-50">
       {/* Optional header */}
       <div className="text-center p-4 font-semibold text-xl bg-white shadow">
@@ -315,6 +317,7 @@ export default function Chat() {
           Send
         </button>
       </div>
+    </div>
     </div>
   );
 }
