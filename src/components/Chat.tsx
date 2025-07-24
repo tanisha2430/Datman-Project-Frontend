@@ -857,7 +857,7 @@ export default function Chat() {
 
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
-      const fallback = await marked.parse("❌ Error contacting assistant");
+      const fallback = await marked.parse("❌ Error contacting Datbot");
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: fallback },
@@ -951,7 +951,7 @@ export default function Chat() {
             );
           })}
           {loading && (
-            <div className="italic text-gray-400 animate-pulse">Assistant is typing...</div>
+            <div className="italic text-gray-400 animate-pulse">Datbot is typing...</div>
           )}
           <div ref={messagesEndRef} />
         </div>
