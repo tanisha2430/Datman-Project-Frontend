@@ -8,7 +8,7 @@ const Home = () => {
       <div className="text-center max-w-3xl mx-auto mb-16">
         <div className="mb-4 inline-flex flex-col items-center gap-2">
           <div className="bg-white/10 px-4 py-1.5 text-sm text-blue-400 mt-4 rounded-full">
-            Introducing DatLings
+            Introducing DatLings...
           </div>
           <img
             src="/logo.png"
