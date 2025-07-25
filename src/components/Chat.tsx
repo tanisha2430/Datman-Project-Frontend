@@ -419,7 +419,7 @@ export default function Chat() {
       // const res = await fetch("https://datman-support-chatbot.netlify.app/.netlify/functions/chat", {
       // const res = await fetch("http://localhost:4000/dev/chat", {
       const res = await fetch(
-        "https://datbot-for-support.netlify.app/.netlify/functions/chat",
+        "https://gentle-manifestation-production-b42c.up.railway.app/chat",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
