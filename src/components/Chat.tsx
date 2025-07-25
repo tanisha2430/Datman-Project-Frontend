@@ -445,7 +445,8 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://datman-support-chatbot.netlify.app/.netlify/functions/chat", {
+      // const res = await fetch("https://datman-support-chatbot.netlify.app/.netlify/functions/chat", {
+      const res = await fetch("http://localhost:4000/dev/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
