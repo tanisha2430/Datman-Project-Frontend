@@ -249,11 +249,14 @@ export default function Kdfs() {
       console.log("📤 Sending to backend:", data);
       setStep(1);
 
-      const response = await fetch("http://localhost:3000/dev/train", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://loving-peace-production.up.railway.app/train",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
       console.log("📥 Received from backend:", result);
@@ -293,7 +296,7 @@ export default function Kdfs() {
       setStep(4);
 
       const refreshResponse = await fetch(
-        "http://localhost:3000/dev/refresh-scores",
+        "https://loving-peace-production.up.railway.app/refresh-score",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
