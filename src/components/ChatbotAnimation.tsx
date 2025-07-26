@@ -28,8 +28,8 @@ export default function ChatbotAnimation() {
     >
       <Lottie animationData={chathome} loop={false} className="w-80 h-80" />
       {!hasSpoken && (
-        <div className="absolute bottom-10 text-gray-500 text-sm animate-pulse">
-          {/* Tap anywhere to activate voice */}
+        <div className="absolute bottom-10 text-gray-500 text-lg animate-pulse">
+          Tap anywhere to activate voice
         </div>
       )}
     </div>
