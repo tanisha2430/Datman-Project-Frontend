@@ -26,7 +26,7 @@ const Home = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <Link to="/kdfs">
           <LottieCard
             title="MyKount aka DFS"
@@ -39,6 +39,13 @@ const Home = () => {
             title="DatBot for Support Team"
             subtitle="Bringing energy and speed to what matters most."
             animationPath="/chat.json"
+          />
+        </Link>
+        <Link to="/kyc">
+          <LottieCard
+            title="KYC Document Verification (Ideation)"
+            subtitle="Bringing energy and speed to what matters most."
+            animationPath="/Document Verification.json"
           />
         </Link>
       </div>
